@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "J:\\12. osztály\\C#\\wpf-03-01-01-data-binding-calculations\\DataBinding\\DataBinding.csproj": {}
+    "J:\\fff\\wpf-03-01-01-data-binding-calculations\\DataBinding\\DataBinding.csproj": {}
   },
   "projects": {
-    "J:\\12. osztály\\C#\\wpf-03-01-01-data-binding-calculations\\DataBinding\\DataBinding.csproj": {
+    "J:\\fff\\wpf-03-01-01-data-binding-calculations\\DataBinding\\DataBinding.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "J:\\12. osztály\\C#\\wpf-03-01-01-data-binding-calculations\\DataBinding\\DataBinding.csproj",
+        "projectUniqueName": "J:\\fff\\wpf-03-01-01-data-binding-calculations\\DataBinding\\DataBinding.csproj",
         "projectName": "DataBinding",
-        "projectPath": "J:\\12. osztály\\C#\\wpf-03-01-01-data-binding-calculations\\DataBinding\\DataBinding.csproj",
+        "projectPath": "J:\\fff\\wpf-03-01-01-data-binding-calculations\\DataBinding\\DataBinding.csproj",
         "packagesPath": "C:\\Users\\b0petbog\\.nuget\\packages\\",
-        "outputPath": "J:\\12. osztály\\C#\\wpf-03-01-01-data-binding-calculations\\DataBinding\\obj\\",
+        "outputPath": "J:\\fff\\wpf-03-01-01-data-binding-calculations\\DataBinding\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
