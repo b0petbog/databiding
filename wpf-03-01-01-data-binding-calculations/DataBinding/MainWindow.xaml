@@ -1,0 +1,67 @@
+﻿<Window x:Class="DataBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBinding"
+        xmlns:model="clr-namespace:DataBinding.Model"
+    mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <model:Triangle/>
+    </Window.DataContext>
+    <Grid Margin="20 10 20 30">
+        <!-- Az első oszlop szélessége automatikus -->
+        <!-- A második oszlop szélessége kitölti a megmaradt részt az ablak jobb széléig        -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="tbSideA" Grid.Row="0" Grid.Column="0">A oldal</TextBlock>
+        <TextBlock x:Name="tbSideB" Grid.Row="1" Grid.Column="0">B oldal</TextBlock>
+        <TextBlock x:Name="tbSideC" Grid.Row="2" Grid.Column="0">C oldal</TextBlock>
+        <TextBlock x:Name="tbKerulet" Grid.Row="3" Grid.Column="0" Margin="0 0 10 0">Kerület</TextBlock>
+        <TextBlock x:Name="tbTerulet" Grid.Row="4" Grid.Column="0" Margin="0 0 10 0">Terület</TextBlock>
+        <!--Második oszlop-->
+        <TextBox x:Name="txtSideA" 
+                 Grid.Row="0" 
+                 Grid.Column="1"  
+                 Margin="1 1 1 1"
+                 Text="{Binding SideA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 />
+        <TextBox x:Name="txtSideB" 
+                 Grid.Row="1" 
+                 Grid.Column="1" 
+                 Margin="1 1 1 1"
+                 Text="{Binding SideB, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 />
+        <TextBox x:Name="txtSideC" 
+                 Grid.Row="2" 
+                 Grid.Column="1" 
+                 Margin="1 1 1 1"
+                 Text="{Binding SideC, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 />
+        <TextBox x:Name="txtKerulet" 
+                 Grid.Row="3" 
+                 Grid.Column="1" 
+                 IsReadOnly="True" 
+                 Margin="1 1 1 1"
+                 Text="{Binding Kerulet, Mode=OneWay}"
+                 />
+        <TextBox x:Name="txtTerulet" 
+                 Grid.Row="4" 
+                 Grid.Column="1" 
+                 IsReadOnly="True" 
+                 TextWrapping="Wrap" 
+                 Margin="1 1 1 1"
+                 Text="{Binding Terulet, Mode=OneWay}"
+                 />
+    </Grid>
+    </Window>
